@@ -1,0 +1,61 @@
+#  Ghana Maternal Health Risk Predictor
+
+##  The Problem
+Ghana faces significant maternal health challenges:
+- **308 maternal deaths** per 100,000 live births (WHO)
+- **42% of pregnant women** suffer from anemia
+- **16 regions** with vast healthcare access disparities
+- Rural communities often far from health facilities
+
+##  The Solution
+A Linear Regression model (built from scratch) that predicts maternal health risk scores to help identify high-risk pregnancies early.
+
+##  Model Performance
+| Metric | Your Model | Sklearn Comparison |
+|--------|------------|-------------------|
+| **Training R²** | 0.7843 | - |
+| **Testing R²** | **0.8045** | **0.8551** |
+| **Testing MAE** | ±5.46 points | ±4.73 points |
+| **Baseline MAE** | ±13.36 points | - |
+| **Improvement** | **2.4x better** than guessing | - |
+
+##  Features Used
+- **Age** of mother (15-49 years)
+- **Blood pressure** (systolic)
+- **Hemoglobin levels** (anemia indicator)
+- **Number of previous pregnancies**
+- **Distance to health facility** (km)
+- **Nutrition score** (0-10)
+- **Education level** (0-3: None, Primary, Secondary, Tertiary)
+- **Region** (all 16 regions of Ghana)
+
+##  Visualizations
+
+
+### Regional Healthcare Access
+![Healthcare Access by Region](ghana_16_regions_access.png)
+*Average distance to health facilities across Ghana's 16 regions. Northern regions show significantly poorer access.*
+
+### Model Performance
+![Model Results](model_performance.png)
+*Actual vs Predicted risk scores (R² = 0.80)*
+
+### Risk Distribution
+![Risk Distribution](ghana_regional_risk.png)
+*Maternal health risk scores across regions*
+
+##  Key Insights
+1. **Northern regions** (Savannah, North East, Upper East) show 2-3x higher risk scores than Greater Accra
+2. **Hemoglobin levels** are the strongest predictor of maternal risk
+3. **Distance to healthcare** is critical - each 10km increases risk by ~7 points
+4. **Education** is protective - tertiary education reduces risk by 5-8 points
+5. **Anemia prevalence** is 2x higher in northern regions
+
+##  Technical Implementation
+- **Pure Python + NumPy** implementation of Linear Regression
+- **Gradient descent** from scratch (2000 iterations)
+- **One-hot encoding** for categorical regions
+- **Feature scaling** with StandardScaler
+- **No black-box ML libraries** for core algorithm
+
+##  Repository Structure
