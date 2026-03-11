@@ -1,0 +1,36 @@
+# Breast Cancer Diagnosis with KNN from Scratch
+
+##  Overview
+This project implements a **K-Nearest Neighbors classifier from scratch** (no sklearn) to diagnose breast cancer using the Wisconsin Breast Cancer Dataset.
+
+##  Implementation
+- Pure Python + NumPy implementation
+- Euclidean distance metric
+- KNN voting mechanism
+- Feature scaling with StandardScaler
+- No black-box ML libraries for core algorithm
+
+## 📊 Results
+
+### Breast Cancer Dataset
+- **Accuracy:** 95.6% (109/114 correct)
+- **Best k:** 5
+- **Samples:** 569 patients, 30 features
+
+### Validation: Diabetes Dataset
+- **Accuracy:** 74.7% (best with k=7)
+- **Samples:** 768 patients, 8 features
+- **Demonstrates:** Model generalizes to new medical data
+
+##  Key Insights
+- Feature scaling is critical for KNN
+- k=5 worked best for cancer data
+- k=7 worked best for diabetes data
+- KNN is interpretable and effective for medical diagnosis
+
+##  Technologies Used
+- Python
+- NumPy
+- Pandas
+- Matplotlib
+- Scikit-learn (only for preprocessing)
